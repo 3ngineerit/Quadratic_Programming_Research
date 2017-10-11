@@ -7,12 +7,11 @@ dim_mat = size(mat);
 mat = mat2str(mat);
 x = [1.025434, .013254];
 dim_vec = size(x);
-x = mat2str(x);
 
 while 1 == 1
     disp('write')
     len = length(x);
-    data_out = ['M:',num2str(dim_mat(1)),'x',num2str(dim_mat(2)),mat,'V:',num2str(dim_vec(2)),x];
+    data_out = ['M:',num2str(dim_mat(1)),'x',num2str(dim_mat(2)),mat,'V:',num2str(length(x)),num2str(];
     data_out = regexprep(data_out,'[','');
     data_out = regexprep(data_out,']','');
     fwrite(t,data_out, 'char');
